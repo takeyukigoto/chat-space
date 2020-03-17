@@ -11,7 +11,7 @@
 
 
 
-# userテーブル
+# usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -27,13 +27,12 @@
 - has_many :tweets
   
 
-# groupテーブル
+# groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
 |name|string|index:true,null:false,unique:true|
-|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users,through: :groups_users
@@ -48,11 +47,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
+|image|text|string|
 |id|integer|null: false, foreign_key: true|
 |text|string|null:false,unique:true|
 |user_id|integer|null: false, foreign_key: true|
-
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
   belongs_to  :user
