@@ -1,0 +1,57 @@
+
+
+.chat-side {
+  height: 100vh;
+  width: 300px;
+  background-color: #253141;
+  .side-bar_user-name {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .top-items {
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      line-height: center;
+        .top-items__name {
+        font-size: 16px;
+        }
+        .top-items__icons {
+        width: 60px;
+        text-align: right;
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 5px;
+          .icon {
+            color: #ffffff;
+            text-decoration: none;
+            }
+        }
+    }
+  }
+}
+
+
+
+
+.side-bar__groups-list {
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  .group {
+    color: #ffffff;
+    text-decoration: none;
+    height: 65px;
+    .group--group-name {
+      padding: 20px 20px 2.5px 20px;
+      font-size: 15px;
+    }
+    .group--latest-message {
+      margin: 2.5px 20px 40px 20px;
+      font-size: 11px;
+    }
+  
+  }
+}
