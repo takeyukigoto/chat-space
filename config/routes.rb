@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 
   devise_for :users
-  root "messages#index"
-  resources :users, only: [:edit, :update]
+  root 'groups#index'
+  resources :users, only: [:edit, :update, :create]
+  resources :groups, only: [:index, :new, :create, :edit, :update]
 end

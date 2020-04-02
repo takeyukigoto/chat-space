@@ -4,29 +4,34 @@
       .top-items__name
         = current_user.name
       .top-items__icons
-        =link_to "#", class:"icon" do
-          =icon('far', 'edit')
+        =link_to new_group_path do
+          =icon('far', 'edit', class: 'icon')
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
             
-      
-
-
-      
+       
              
   .side-bar__groups-list  
-    =link_to "#", class:"group" do
+    - current_user.groups.each do |group|
       .group
-        .group--group-name
-          techcamp
-        .group--latest-message
-          まだメッセージがありません
-
-    =link_to "#", class:"group" do
-      .group
-        .group--group-name
-          techcamp
-        .group--latest-message
-          まだメッセージがありません
+        = link_to '#', class:"group" do
+          .group--group-name
+            = group.name
+          .group--latest-message
+            メッセージはまだありません。
 
 
+  -# .side-bar__groups-list  
+  -#   =link_to "#", class:"group" do
+  -#         .group
+  -#           .group--group-name
+  -#             techcamp
+  -#           .group--latest-message
+  -#             まだメッセージがありません
+
+  -#   =link_to "#", class:"group" do
+  -#         .group
+  -#           .group--group-name
+  -#             techcamp
+  -#           .group--latest-message
+  -#             まだメッセージがありません
