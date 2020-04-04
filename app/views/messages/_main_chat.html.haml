@@ -2,37 +2,31 @@
   .chat-main__group-info
     .main-header__leftbox
       .current-group
-        test
+        = @group.name
       .menber-list
-        masa
+        Member:
+        - @group.users.each do |user|
+          %member
+          = user.name
     
 
-    =link_to "#", class:"edit-btn" do
+    =link_to edit_group_path(@group), class:"edit-btn" do
       .main-header__edit-btn 
         edit
 
 
 
   .chat-main__message-list
-    .message
-      .message--up-message
-        mass
-      .message--up-message-second
-        おはよう
+    = render @messages
 
-    .message
-      .message--up-message
-        mass
-      .message--up-message-second
-        おはよう    
-  
 
   .chat-main__message-form
-    %form.new-message
-      .input-box
-        %input{type: "text", class: "input-box__text", palaceholder: "type a message"}
-        %label{class: "input-box__image"}
-          =icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}    
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
       
