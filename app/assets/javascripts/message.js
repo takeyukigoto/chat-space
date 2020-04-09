@@ -53,10 +53,10 @@ $('#new_message').on('submit', function(e){
  })
   .done(function(data){
     var html = buildHTML(data);
-    $('.chat-main__message-list').append(html);
-       $('form')[0].reset();
-       $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
-       $(".form__submit").prop("disabled", false);
+      $('.chat-main__message-list').append(html);
+      $('form')[0].reset();
+      $('.chat-main__message-list').animate({ scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+      $(".form__submit").prop("disabled", false);
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
