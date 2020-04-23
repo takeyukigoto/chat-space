@@ -13,12 +13,16 @@
       height: 20px;
       width: 260px;
       margin: 0 20px;
+      color: #ffffff;
       display: flex;
       justify-content: space-between;
       line-height: center;
         .top-items__name {
         font-size: 16px;
         }
+          .current_user.name {
+            text-decoration: none;
+          }
         .top-items__icons {
         width: 60px;
         text-align: right;
@@ -44,15 +48,18 @@
     a{
       color:#ffffff;
       text-decoration: none;
+      width: 260px;
+      height: 105px;
+      box-sizing: border-box;
     }
     color: #ffffff;
-    height: 65px;
+    
     .group--group-name {
-      padding: 20px 20px 2.5px 20px;
+      padding: 20px 5px 12px 20px;
       font-size: 15px;
     }
     .group--latest-message {
-      margin: 2.5px 20px 40px 20px;
+      padding: 0px 5px 40px 20px;
       font-size: 11px;
     }
   
