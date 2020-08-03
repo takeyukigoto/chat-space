@@ -1,3 +1,8 @@
+#画像
+
+![サンプル](sample.jpg)
+
+
 ## groups_usersテーブル  テーブル
 
 |Column|Type|Options|
