@@ -5,7 +5,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
+### Association  123
 - belongs_to :group
 - belongs_to :user
 
