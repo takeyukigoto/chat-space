@@ -1,4 +1,4 @@
-## groups_usersテーブル
+## groups_usersテーブル  テーブル
 
 |Column|Type|Options|
 |------|----|-------|
